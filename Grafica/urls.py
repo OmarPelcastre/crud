@@ -42,13 +42,13 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^', include(router.urls)),
-    
+    #re_path(r'^', include(router.urls)),
+    re_path(r'^api/v1/swagger/', schema_view),
     re_path(r'^api/v1/', include('Test1.urls')),
-    # re_path(r'^api/v1/test1/$', views.Test1List.as_view()),
+    #re_path(r'^api/v1/test1/$', views.Test1List.as_view()),
     # re_path(r'^api/v1/test1/(?P<pk>\d+)$', views.Test1Detail.as_view()),
     re_path(r'^api/v1/login/', include('login.urls')),
-    re_path(r'^api/v1/registration/', include('rest_auth.registration.urls')),
-    re_path(r'^api/v1/swagger/', schema_view),
+    #re_path(r'^api/v1/registration/', include('rest_auth.registration.urls')),
+    
 
 ]
