@@ -42,7 +42,7 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #re_path(r'^', include(router.urls)),
+    re_path(r'^', include(router.urls)),
     re_path(r'^api/v1/swagger/', schema_view),
     re_path(r'^api/v1/', include('Test1.urls')),
     #re_path(r'^api/v1/test1/$', views.Test1List.as_view()),
